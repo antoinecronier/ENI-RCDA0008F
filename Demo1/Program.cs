@@ -8,6 +8,13 @@ namespace Demo1
 {
     public class Program
     {
+        #region MyRegion
+        /*azpijeaizje
+         a
+        pozek
+        poazkpe
+        k*/
+        #endregion
         public static int test;
         public static void Main(string[] args)
         {
