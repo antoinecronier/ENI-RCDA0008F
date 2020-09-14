@@ -90,9 +90,9 @@ namespace Demo4
             int[,] tab1 = new int[2,5];
 
             // Ne sourtout pas utiliser
-            dynamic yolo = "azoieuao";
-            yolo = 10;
-            yolo.yala = 10;
+            //dynamic yolo = "azoieuao";
+            //yolo = 10;
+            //yolo.yala = 10;
 
             var test1 = new ObjectDisplayManager<User, User>(new User());
             //var test2 = test1.Yololo();
