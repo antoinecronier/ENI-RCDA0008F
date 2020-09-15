@@ -12,6 +12,7 @@ namespace TPModule2.Entities
 		{
 			get { return this.Longueur; }
 		}
+
 		public override string Print()
 		{
 			//StringBuilder builder = new StringBuilder();
