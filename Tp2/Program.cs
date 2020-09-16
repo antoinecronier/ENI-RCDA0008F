@@ -66,7 +66,7 @@ namespace TPModule3
             //IEnumerable <IGrouping <Auteur, Livre>> auteurQ2 = FakeDb.Instance.ListeLivres
             //    .GroupBy(l => l.Auteur)
             //    .Where(g => g.Count() == FakeDb.Instance.ListeLivres
-            //    .GroupBy(l => l.Auteur).Max(x => x.Count()));
+            //      .GroupBy(l => l.Auteur).Max(x => x.Count()));
 
             //foreach (var item in auteurQ2)
             //{
