@@ -39,6 +39,7 @@ namespace TPModule5_1.Controllers
             }
             catch (Exception)
             {
+                vm.Couleurs = FakeDbCat.Instance.Couleurs;
                 return View(vm);
             }
         }
@@ -75,16 +76,17 @@ namespace TPModule5_1.Controllers
         [HttpPost]
         public ActionResult Delete(int id, FormCollection collection)
         {
+            Chat chat = null;
             try
             {
-                Chat chat = FakeDbCat.Instance.Chats.FirstOrDefault(x => x.Id == id);
+                chat = FakeDbCat.Instance.Chats.FirstOrDefault(x => x.Id == id);
                 FakeDbCat.Instance.Chats.Remove(chat);
 
                 return RedirectToAction("Index");
             }
             catch
             {
-                return View(id);
+                return View(chat);
             }
         }
     }
