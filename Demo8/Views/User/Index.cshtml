@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Demo8.Models.UserVM>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.User.Firstname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.User.Lastname)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.Firstname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.User.Lastname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Age)
+        </td>
+    </tr>
+}
+
+</table>
