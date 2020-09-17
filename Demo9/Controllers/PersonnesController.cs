@@ -32,11 +32,19 @@ namespace Demo9.Controllers
 
         // POST: Personnes/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(Personne personne)
         {
             try
             {
-                // TODO: Add insert logic here
+                if (ModelState.IsValid)
+                {
+                    Console.WriteLine("aze");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "aezpiojazpeko");
+                    return View();
+                }
 
                 return RedirectToAction("Index");
             }

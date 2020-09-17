@@ -127,6 +127,7 @@
     </Compile>
     <Compile Include="Models\Personne.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validation\MyValidation.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -168,6 +169,7 @@
     <Content Include="Views\Personnes\Details.cshtml" />
     <Content Include="Views\Personnes\Delete.cshtml" />
     <Content Include="Views\Personnes\UserDetailsView.cshtml" />
+    <Content Include="Views\Personnes\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
