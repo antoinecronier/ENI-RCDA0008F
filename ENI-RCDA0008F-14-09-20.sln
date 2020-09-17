@@ -33,7 +33,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPModule5-2-BO", "Tp4\TPMod
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TpModule5-2", "TpModule5-2", "{78D1A7DF-322B-43FD-955C-1192A810AAE7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPModule5-2", "Tp4\TPModule5-2\TPModule5-2.csproj", "{8C2221D1-E99E-409D-BAFC-24CCC6819866}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TPModule5-2", "TPModule5-2\TPModule5-2.csproj", "{8C2221D1-E99E-409D-BAFC-24CCC6819866}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
