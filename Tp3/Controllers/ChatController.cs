@@ -80,9 +80,17 @@ namespace TPModule5_1.Controllers
             try
             {
                 chat = FakeDbCat.Instance.Chats.FirstOrDefault(x => x.Id == id);
-                FakeDbCat.Instance.Chats.Remove(chat);
 
-                return RedirectToAction("Index");
+                if (chat != null)
+                {
+                    FakeDbCat.Instance.Chats.Remove(chat);
+
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return RedirectToAction("Index");
+                }
             }
             catch
             {
