@@ -119,6 +119,8 @@
   <ItemGroup>
     <Compile Include="Annotations\Checker.cs" />
     <Compile Include="Annotations\CheckerExtension.cs" />
+    <Compile Include="Annotations\IngredientLengthValidation.cs" />
+    <Compile Include="Annotations\IngredientNotSame.cs" />
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />

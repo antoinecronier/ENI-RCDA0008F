@@ -21,8 +21,10 @@ namespace TPModule5_3.Models
         [Checker(null, Checker.CheckerAction.Required)]
         public int? IdPate { get; set; }
 
-        [Checker(null, Checker.CheckerAction.Length, LengthMin = 2, LengthMax = 5)]
-        [Checker(null, Checker.CheckerAction.NotSame)]
+        //[Checker(null, Checker.CheckerAction.Length, LengthMin = 2, LengthMax = 5)]
+        //[Checker(null, Checker.CheckerAction.NotSame)]
+        [IngredientLengthValidation(2,5)]
+        [IngredientNotSame]
         public List<int> IdsIngredients { get; set; } = new List<int>();
         
     }
