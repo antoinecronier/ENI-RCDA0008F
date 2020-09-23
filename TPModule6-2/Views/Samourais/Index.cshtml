@@ -1,0 +1,80 @@
+﻿@model IEnumerable<BO.Samourai>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Force)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Nom)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Arme)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArtMartials)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Potentiel)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Force)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nom)
+            </td>
+            @if (item.Arme != null)
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.Arme.Nom)
+                </td>
+            }
+            else
+            {
+                <td>
+                </td>
+            }
+
+            <td>
+                @if (item.ArtMartials.Count > 0)
+                {
+                    int i = 0;
+                    for (; i < item.ArtMartials.Count - 1; i++)
+                    {
+                        @Html.DisplayFor(modelItem => item.ArtMartials.ElementAt(i).Nom)<br />
+                    }
+                    @Html.DisplayFor(modelItem => item.ArtMartials.ElementAt(i).Nom)
+                }
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Potentiel)
+            </td>
+            @*@foreach (var artMartial in item.ArtMartials)
+                {
+                    @Html.DisplayFor(modelItem => artMartial.Nom)<br />
+                }*@
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
