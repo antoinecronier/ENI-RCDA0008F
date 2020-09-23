@@ -6,6 +6,7 @@
 
 <h2>Delete</h2>
 
+@*Permet de regarder si il y a une erreur de renvoyé par le controlleur*@
 @if (ViewData.ModelState.Values.Select(x => x.Errors).Count() > 1)
 {
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })

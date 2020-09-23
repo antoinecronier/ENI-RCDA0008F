@@ -16,6 +16,7 @@ namespace TPModule6_2.Helpers
         public static MvcHtmlString GenerateForm(this HtmlHelper htmlHelper, String formData)
         {
             StringBuilder result = new StringBuilder();
+
             result.Append($"<form action=\"/{htmlHelper.ViewContext.RouteData.GetRequiredString("controller")}/{htmlHelper.ViewContext.RouteData.GetRequiredString("action")}\" method=\"post\" novalidate=\"novalidate\" >");
             result.Append(htmlHelper.AntiForgeryToken().ToString());
 

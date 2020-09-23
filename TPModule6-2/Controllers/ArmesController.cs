@@ -17,6 +17,7 @@ namespace TPModule6_2.Controllers
         {
             bool result = false;
 
+            // Retourne la liste des id des armes pour les samourais possédant une arme non null en mode eager
             List<int> ids = db.Samourais.Include(x => x.Arme).Where(x => x.Arme != null).Select(x => x.Arme.Id).ToList();
             if (ids.Contains(id.Value))
             {
